@@ -1,0 +1,51 @@
+#cloud:
+#  aws:
+#    credentials:
+#      access-key: AKIA47ZRQ4XUHBKYAH5B
+#      secret-key: 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
+#    region:
+#      use-default-aws-region-chain: true
+#    stack:
+#      auto: false
+#
+#
+#application:
+#  bucket:
+#    name: lazada-storage
+#
+#
+#spring:
+#  servlet:
+#    multipart:
+#      enabled: true
+#      file-size-threshold: 2MB
+#      max-file-size: 5MB
+#      max-request-size: 10MB
+#
+#server:
+#  port: 9090
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIA47ZRQ4XUHBKYAH5B
+      secret-key: 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
+    region:
+      auto: false
+      static: us-west-2
+      use-default-aws-region-chain: true
+    stack: false
+    stack.auto: false
+logging:
+  level:
+    com:
+      amazonaws:
+        internal:
+          InstanceMetadataServiceResourceFetcher: error
+        util:
+          EC2MetadataUtils: error
+
+
+application:
+  bucket:
+    name: lazada-storage
